@@ -47,7 +47,7 @@ COPY setup.cfg ./
 COPY README.md ./
 COPY LICENSE ./
 COPY gwpv ./gwpv
-RUN pip install .
+RUN --mount=type=cache,target=/root/.cache pip install .
 WORKDIR /root
 COPY Examples/ ./Examples
 
